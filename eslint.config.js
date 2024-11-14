@@ -1,9 +1,9 @@
-import { FlatCompat } from '@eslint/eslintrc'
+import {FlatCompat} from '@eslint/eslintrc'
 import js from '@eslint/js'
 import typeScriptParser from '@typescript-eslint/parser'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort'
-import { ReactThreeFiber } from '@react-three/fiber'
+import {ReactThreeFiber} from '@react-three/fiber'
 
 // Initialize FlatCompat with recommendedConfig
 const compat = new FlatCompat({
@@ -32,8 +32,8 @@ export default [
       'simple-import-sort': simpleImportSortPlugin,
     },
     rules: {
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-      quotes: ['error', 'single', { avoidEscape: true }],
+      'react-refresh/only-export-components': ['warn', {allowConstantExport: true}],
+      quotes: ['error', 'single', {avoidEscape: true}],
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-empty-function': 'warn',
