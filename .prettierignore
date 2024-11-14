@@ -1,0 +1,8 @@
+.gitignore
+*.lock
+node_modules
+build
+*.min.js
+public/*.hot-update.*
+public/
+src/routeTree.gen.ts

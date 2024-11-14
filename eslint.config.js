@@ -1,8 +1,9 @@
-import {FlatCompat} from '@eslint/eslintrc'
+import { FlatCompat } from '@eslint/eslintrc'
 import js from '@eslint/js'
 import typeScriptParser from '@typescript-eslint/parser'
-import reactRefreshPlugin from 'eslint-plugin-react-refresh'
+import reactRefresh from 'eslint-plugin-react-refresh'
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort'
+import { ReactThreeFiber } from '@react-three/fiber'
 
 // Initialize FlatCompat with recommendedConfig
 const compat = new FlatCompat({
@@ -24,14 +25,15 @@ export default [
         sourceType: 'module',
       },
     },
-    ignores: ['dist', '.eslintrc.cjs', 'node_modules/'],
+    ignores: ['dist', 'eslint.config.js', 'vite.config.ts', 'node_modules/'],
     plugins: {
-      'react-refresh': reactRefreshPlugin,
+      ReactThreeFiber,
+      'react-refresh': reactRefresh,
       'simple-import-sort': simpleImportSortPlugin,
     },
     rules: {
-      'react-refresh/only-export-components': ['warn', {allowConstantExport: true}],
-      quotes: ['error', 'single', {avoidEscape: true}],
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      quotes: ['error', 'single', { avoidEscape: true }],
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-empty-function': 'warn',
